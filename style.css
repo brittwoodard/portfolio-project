@@ -59,6 +59,7 @@ footer p {font-weight: 200;}
 .padded-10 {padding: 10%;}
 
 .margin-b-1 {margin-bottom: 1em;}
+.margin-t-3 {margin-top: 3em;}
 
 .tall-70 {min-height: 70vh;;}
 .tall-80 {min-height: 80vh;}
@@ -71,6 +72,8 @@ footer p {font-weight: 200;}
 .text-light {color: white;}
 
 .bold {font-weight: 600;}
+
+.landscape {padding-bottom: 60%;}
 
 .profile-image {
     border-radius: 100%;
