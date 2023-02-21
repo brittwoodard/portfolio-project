@@ -4,11 +4,13 @@ title: Projects
 ---
 <section class="padded-5">
     <div class="grid">
-        <h2>We design & create but if you have a design of your own, let us know!</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere iure animi perferendis perspiciatis non earum rerum beatae in consequatur ipsa, quo atque ullam dicta ipsum et. Harum, ut mollitia.</p>
+        <div class="col-8_xs-12">
+            <h2>We design & create but if you have a design of your own, let us know!</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere iure animi perferendis perspiciatis non earum rerum beatae in consequatur ipsa, quo atque ullam dicta ipsum et. Harum, ut mollitia.</p>
+        </div>
     </div>
 
-    {% for item in site.projects %}
+    {% for project in site.projects %}
     <div class="grid">
         <div class="col-5 bg-image" style="background-image: url('{{project.featured_image}}');"></div>
         <div class="col-7-middle">
@@ -19,4 +21,5 @@ title: Projects
             <a href="{{project.live-url}}" class="button">Go to site</a>
         </div>
     </div>
+    {% endfor %}
 </section>
