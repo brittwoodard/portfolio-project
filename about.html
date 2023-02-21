@@ -1,27 +1,52 @@
 ---
 layout: default
 title: About
+banner_image: /images/plant-light.png
+team:
+ - profile_image: /images/profile-1.jpg
+   name: Greg
+   title: Big Boss Coder
+   bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate iusto voluptatibus recusandae quod quos animi labore quam cupiditate architecto velit.
+ - profile_image: /images/profile-2.jpg
+   name: Joe
+   title: Web Developer
+   bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti modi officia perspiciatis accusantium autem consectetur natus ab, omnis ad vitae nostrum alias quo praesentium nemo eaque soluta commodi. Tenetur, nulla!
+ - profile_image: /images/profile-3.jpg
+   name: Jane
+   title: Graphic Designer
+   bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quidem repudiandae ipsum, doloremque perspiciatis, officiis asperiores itaque minus laborum.
+about-video-id: /pfGixmjwUuc
 ---
 
 <!-- Header Section -->
 <section class="grid tall-70 bg-green text-light">
     <div class="col-5-middle padded-5">
-        <h3>Meet our growing family.</h3>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsa iusto a aliquam id! Magni voluptas eaque voluptatibus, maxime reprehenderit distinctio corporis.</p>
+        <h3 class="editable">Meet our growing family.</h3>
+        <p class="editable">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis ipsa iusto a aliquam id! Magni voluptas eaque voluptatibus, maxime reprehenderit distinctio corporis.</p>
     </div>
-    <div class="col-7 bg-image bg-plant-r"></div>
+    <div class="col-7 bg-image" style="background-image: url('{{page.banner_image}}');"></div>
 </section>
 
-<!-- Team -->
+<!-- Team section -->
 <section class="padded-10">
-    
-    <div class="grid">
-        <div class="col-4 bg-image" style="background-image: url('/images/profile-1.jpg');"></div>
-        <div class="col-8">
-            <h3>Meet Person</h3>
-            <p><strong>Job Title</strong></p>
-            <p>Bio</p>
-        </div>
-    </div>
+	{% for item in page.team %}
+	<div class="grid flex-flip-alternate padded-5">
+		<div class="col-5">
+			<img src="{{item.profile_image}}" class="profile-image">
+       	</div>
+       	<div class="col-7-middle padded-5">
+           	<h3>Meet {{item.name}}</h3>
+           	<p><strong>{{item.title}}</strong></p>
+           	<p>{{item.bio}}</p>
+       	</div>
+   	</div>
+   	{% endfor %}
+ 	</div>
+</section>
 
+<!-- Video Section -->
+<section class="padded-5 bg-green text-light center">
+    <h2 class="editable">Watch our corny "Meet the Team" video.</h2>
+    <p class="editable">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    <div class='embed-container'><iframe src='https://www.youtube.com/embed/{{page.about-video-id}}' frameborder='0' allowfullscreen></iframe></div>
 </section>
