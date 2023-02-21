@@ -1,23 +1,35 @@
 ---
 layout: default
 title: About
-banner_image: /images/plant-light.png
+banner_image: /images/plant.jpg
 team:
- - profile_image: /images/profile-1.jpg
-   name: Greg
-   title: Big Boss Coder
-   bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate iusto voluptatibus recusandae quod quos animi labore quam cupiditate architecto velit.
- - profile_image: /images/profile-2.jpg
-   name: Joe
-   title: Web Developer
-   bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti modi officia perspiciatis accusantium autem consectetur natus ab, omnis ad vitae nostrum alias quo praesentium nemo eaque soluta commodi. Tenetur, nulla!
- - profile_image: /images/profile-3.jpg
-   name: Jane
-   title: Graphic Designer
-   bio: Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quidem repudiandae ipsum, doloremque perspiciatis, officiis asperiores itaque minus laborum.
+   -
+      profile_image: /images/profile-1.jpg
+      name: Greg
+      title: Big Boss Coder
+      bio: >-
+         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptate
+         iusto voluptatibus recusandae quod quos animi labore quam cupiditate
+         architecto velit.
+   -
+      profile_image: /images/profile-3.jpg
+      name: Jane
+      title: Graphic Designer
+      bio: >-
+         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel quidem
+         repudiandae ipsum, doloremque perspiciatis, officiis asperiores itaque
+         minus laborum.
+   -
+      profile_image: /images/profile-2.jpg
+      name: Joe
+      title: Web Developer
+      bio: >-
+         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti modi
+         officia perspiciatis accusantium autem consectetur natus ab, omnis ad
+         vitae nostrum alias quo praesentium nemo eaque soluta commodi. Tenetur,
+         nulla!
 about-video-id: /pfGixmjwUuc
 ---
-
 <!-- Header Section -->
 <section class="grid tall-70 bg-green text-light">
     <div class="col-5-middle padded-5">
@@ -32,7 +44,7 @@ about-video-id: /pfGixmjwUuc
 	{% for item in page.team %}
 	<div class="grid flex-flip-alternate padded-5">
 		<div class="col-5">
-			<img src="{{item.profile_image}}" class="profile-image">
+			<img src="{{item.profile_image}}" class="profile-image" />
        	</div>
        	<div class="col-7-middle padded-5">
            	<h3>Meet {{item.name}}</h3>
@@ -41,7 +53,7 @@ about-video-id: /pfGixmjwUuc
        	</div>
    	</div>
    	{% endfor %}
- 	</div>
+ 	
 </section>
 
 <!-- Video Section -->
