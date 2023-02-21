@@ -5,23 +5,6 @@ title: Homepage
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- The title for SEO & browser tabs -->
-        <title> Portfolio Website </title>
-
-        
-
-    <!-- Header -->
-    <header class="grid">
-        <div class="col-6_sm-12 mob-center mob-margin-b-1">
-            <h1>The Design Collective.</h1>
-        </div>
-        <nav class="col-6_sm-12-middle right mob-center">
-            <a href="#why">Why Us</a>
-            <a href="#services">Services</a>
-            <a href="#projects">Projects</a>
-            <a href="#contact">Contact</a>
-        </nav>
-     </header>
         
      <!-- Header Section -->
      <section class="grid padded-5 bg-image bg-plant-r tall-80 mob-bg-plant-r">
@@ -32,9 +15,7 @@ title: Homepage
      </section>
 
     <!-- Newsletter Section -->
-    <section class="padded-5 center bg-brown text-light">
-        <p class="bold">Sign up to our newsletter for design resources &#8702; </p>
-    </section>
+    {% include newsletter-signup.html %}
 
     <!-- Features Section -->
     <section class="grid-spaceAround padded-5 center" id="why">
@@ -133,25 +114,5 @@ title: Homepage
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-brown text-light" id="contact">
-        <div class="grid padded-5">
-            <div class="col-8_xs-9">
-                <h2>The Design Collective</h2>
-                <h3>Web Design & Development</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dignissimos quod laudantium eligendi, distinctio incidunt quibusdam, modi amet dolorum ullam molestias odio cupiditate cum debitis odit dolore? Quis, sequi autem.</p>
-            </div>
-            <div class="col-4_xs-12-middle right">
-                <h4>Let's Connect</h4>
-                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-            </div>
-        </div>
-        <div>
-            <p class="center copyright">Copyright 2022</p>
-        </div>
-    </footer>
     </body>
 </html>
