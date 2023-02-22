@@ -1,7 +1,15 @@
 ---
 layout: default
 title: Projects
+features:
+ - title: NoaOlivia Website
+   description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo unde quaerat sit! Ratione assumenda tempore mollitia quos vitae, quas maxime sunt saepe numquam modi quaerat beatae tempora quod natus accusamus.
+   featured_image: /images/placeholder-project.png
+   live-url: https://google.com
+   designed-by: Designer
+   built-by: Web Developer
 ---
+
 <!-- Portfolio Section -->
 <section class="padded-5 bg-green text-light">
     <div class="grid">
@@ -11,7 +19,7 @@ title: Projects
         </div>
     </div>
 
-    {% for project in site.projects limit: 5 %}
+    {% for project in site.projects limit:5 offset:1 %}
     <div class="grid margin-t-3">
         <div class="col-5 bg-image" style="background-image: url('{{project.featured_image}}');"></div>
         <div class="col-7-middle padded-5">
@@ -29,3 +37,23 @@ title: Projects
 <section>
     {% include newsletter-signup.html %}
 </section>
+
+<!-- Featured Section -->
+<section>
+    <div class="capped-width">
+        {% for item in page.features limit:1 %}
+        <div class="grid flex-flip-alternate">
+            <div class="col-5_sm-12-middle padded-5">
+                <h3>{{item.title}}</h3>
+                <p>{{item.description}}</p>
+                <p><strong>Design by: {{item.designed-by}}</strong></p>
+                <p><strong>Build by: {{item.built-by}}</strong></p>
+                <a href="{{project.live-url}}" class="button-dark" target="_blank">Go to site</a>
+            </div>
+            <div class="col-7_sm-12-middle padded-5">
+                <img src="{{item.featured_image}}" alt="{{item.title}}">   
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+ </section>
