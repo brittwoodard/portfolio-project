@@ -2,6 +2,7 @@
 layout: default
 title: Projects
 ---
+<!-- Portfolio Section -->
 <section class="padded-5 bg-green text-light">
     <div class="grid">
         <div class="col-8_xs-12">
@@ -10,7 +11,7 @@ title: Projects
         </div>
     </div>
 
-    {% for project in site.projects %}
+    {% for project in site.projects limit: 5 %}
     <div class="grid margin-t-3">
         <div class="col-5 bg-image" style="background-image: url('{{project.featured_image}}');"></div>
         <div class="col-7-middle padded-5">
@@ -22,4 +23,9 @@ title: Projects
         </div>
     </div>
     {% endfor %}
+</section>
+
+<!-- Newsletter Section -->
+<section>
+    {% include newsletter-signup.html %}
 </section>

@@ -94,7 +94,7 @@ title: Homepage
     <!-- Projects Section -->
     <section class="padded-5 bg-peach" id="projects">
         <h3 class="center margin-b-1">Recent Projects</h3>
-        {% for project in site.projects %}
+        {% for project in site.projects limit: 2 %}
   
         <div class="grid flex-flip-alternate">
             <div class="col-5_sm-12-middle padded">
